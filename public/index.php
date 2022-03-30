@@ -2,6 +2,7 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use coding\app\controllers\IndexController;
+use coding\app\controllers\AuthorsController;
 use coding\app\system\AppSystem;
 use coding\app\system\Router;
 use Dotenv\Dotenv;
@@ -22,6 +23,9 @@ $system=new AppSystem($config);
 
 
 Router::get('/',[IndexController::class,'list']);
+Router::get('/add_author',[AuthorsController::class,'cearteAuthor']);
+Router::post('/save_author',[AuthorsController::class,'storeAuthor']);
+
 
 /** end of web routes */
 

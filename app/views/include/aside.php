@@ -88,6 +88,18 @@
     <div>عرض الاقسام</div>
   </a>
 </li>
+<!-- Misc -->
+<li class="menu-header small text-uppercase"><span class="menu-header-text">ادارة الكتاب</span></li>
+  <li class="menu-item">
+  <a href="/add_author" class="menu-link">
+    <div>انشاء كاتب</div>
+  </a>
+</li>
+<li class="menu-item">
+  <a href="list_categories" class="menu-link">
+    <div>عرض الكاتب</div>
+  </a>
+</li>
   <!-- Misc -->
   <li class="menu-header small text-uppercase"><span class="menu-header-text">ادارة الطلبات</span></li>
   <li class="menu-item">
