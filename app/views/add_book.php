@@ -534,7 +534,12 @@
         <label class="form-label" for="multicol-email">اسم القسم</label>
         <div class="input-group input-group-merge">
           <select name="category_id" id="" class="form-control">
-              <option value="1">11111</option>
+              <option value="">......</option>
+              <?php
+                foreach($params['categories'] as $cat){
+                    echo "<option value='".$cat['id']."'>". $cat['name'] . "</option>";
+                }
+              ?>
           </select>
         </div>
       </div>

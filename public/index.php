@@ -24,6 +24,7 @@ $system=new AppSystem($config);
 
 Router::get('/',[IndexController::class,'list']);
 Router::get('/add_book',[BookController::class,'create']);
+Router::post('/save_book',[BookController::class,'store']);
 
 /** end of web routes */
 
