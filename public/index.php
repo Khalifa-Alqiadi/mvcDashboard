@@ -2,6 +2,7 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use coding\app\controllers\IndexController;
+use coding\app\controllers\BookController;
 use coding\app\system\AppSystem;
 use coding\app\system\Router;
 use Dotenv\Dotenv;
@@ -22,6 +23,7 @@ $system=new AppSystem($config);
 
 
 Router::get('/',[IndexController::class,'list']);
+Router::get('/add_book',[BookController::class,'create']);
 
 /** end of web routes */
 

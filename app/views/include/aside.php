@@ -114,7 +114,7 @@
   <!-- Misc -->
   <li class="menu-header small text-uppercase"><span class="menu-header-text">ادارة الكتب/span></li>
   <li class="menu-item">
-  <a href="#" class="menu-link">
+  <a href="add_book" class="menu-link">
     <div>اضافة كتاب</div>
   </a>
 </li>
