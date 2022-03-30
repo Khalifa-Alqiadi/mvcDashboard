@@ -44,28 +44,7 @@ class Model{
         return $stmt->fetchAll();
 
     }
-	public function insert( $table_name, $fields = [] ){
-		$this->resetQuery();
-
-		$keys = implode('`, `', array_keys($fields));
-		$values = '';
-		$x=1;
-		foreach ($fields as $field => $value) {
-			$values .='?';
-			$this->bindValues[] =  $value;
-			if ($x < count($fields)) {
-				$values .=', ';
-			}
-			$x++;
-		}
- 
-		$this->sql = "INSERT INTO `{$table_name}` (`{$keys}`) VALUES ({$values})";
-		// $this->getSQL = $this->sql;
-		$stmt=AppSystem::$appSystem->database->pdo->prepare($this->sql);
-		$stmt->execute($this->bindValues);
-		return $stmt;
-	}
-
+	
     
 	private function resetQuery(){
 		$this->table = null;
