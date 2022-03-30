@@ -9,7 +9,6 @@ include "include/head.php";
 <div class="layout-wrapper layout-content-navbar  ">
 <div class="layout-page">
       
-      
 <?php
 include "include/aside.php";
 include "include/nav.php";
