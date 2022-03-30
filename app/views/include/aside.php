@@ -79,6 +79,18 @@
   <!-- Misc -->
   <li class="menu-header small text-uppercase"><span class="menu-header-text">ادارة الاقسام والتصنيفات</span></li>
   <li class="menu-item">
+  <a href="/add_publishers" class="menu-link">
+    <div>انشاء ناشر</div>
+  </a>
+</li>
+<li class="menu-item">
+  <a href="list_categories" class="menu-link">
+    <div>عرض الناشرين</div>
+  </a>
+</li>
+  <!-- Misc -->
+  <li class="menu-header small text-uppercase"><span class="menu-header-text">ادارة الناشرين </span></li>
+  <li class="menu-item">
   <a href="/add_category" class="menu-link">
     <div>انشاء قسم</div>
   </a>
