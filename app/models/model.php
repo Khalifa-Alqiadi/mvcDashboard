@@ -44,6 +44,26 @@ class Model{
         return $stmt->fetchAll();
 
     }
+	
+	private function resetQuery(){
+		$this->table = null;
+		$this->columns = null;
+		$this->sql = null;
+		$this->bindValues = null;
+		$this->join = null;
+		$this->limit = null;
+		$this->orderBy = null;
+		$this->where = null;
+		$this->orWhere = null;
+		$this->whereCount = 0;
+		$this->isOrWhere = false;
+	}
+	
+    public function table($table_name){
+		$this->resetQuery();
+		$this->table = $table_name;
+		return $this;
+	}
 	public function insert( $table_name, $fields = [] ){
 		$this->resetQuery();
 
@@ -60,30 +80,10 @@ class Model{
 		}
  
 		$this->sql = "INSERT INTO `{$table_name}` (`{$keys}`) VALUES ({$values})";
-		// $this->getSQL = $this->sql;
+		$this->getSQL = $this->sql;
 		$stmt=AppSystem::$appSystem->database->pdo->prepare($this->sql);
 		$stmt->execute($this->bindValues);
 		return $stmt;
-	}
-
-    
-	private function resetQuery(){
-		$this->table = null;
-		$this->columns = null;
-		$this->sql = null;
-		$this->bindValues = null;
-		$this->join = null;
-		$this->limit = null;
-		$this->orderBy = null;
-		$this->where = null;
-		$this->orWhere = null;
-		$this->whereCount = 0;
-		$this->isOrWhere = false;
-	}
-    public function table($table_name){
-		$this->resetQuery();
-		$this->table = $table_name;
-		return $this;
 	}
     public function select($columns){
 		$columns = explode(',', $columns);
@@ -95,6 +95,10 @@ class Model{
 		$this->columns = `[$columns]`;
 		return $this;
 	}
+	public function join(string $table_name, $FK, $PK){
+        $this->join = " JOIN  $table_name  ON  $FK  =  $PK";
+        return $this;
+    }
 	public function where(){
 		if ($this->whereCount == 0) {
 			$this->where .= " WHERE ";

@@ -101,6 +101,53 @@
   </a>
 </li>
   <!-- Misc -->
+  <li class="menu-header small text-uppercase"><span class="menu-header-text">ادارة الناشرين </span></li>
+  <li class="menu-item">
+  <a href="/add_city" class="menu-link">
+    <div>انشاء مدينة</div>
+  </a>
+</li>
+<li class="menu-item">
+  <a href="list_city" class="menu-link">
+    <div>عرض المدن</div>
+  </a>
+</li>
+  <!-- Misc -->
+  <li class="menu-header small text-uppercase"><span class="menu-header-text">ادارة الناشرين </span></li>
+  <li class="menu-item">
+  <a href="/add_offers" class="menu-link">
+    <div>انشاء عرض</div>
+  </a>
+</li>
+<li class="menu-item">
+  <a href="list_offers" class="menu-link">
+    <div>عرض العروض</div>
+  </a>
+</li>
+  <!-- Misc -->
+  <li class="menu-header small text-uppercase"><span class="menu-header-text">ادارة الناشرين </span></li>
+  <li class="menu-item">
+  <a href="/add_payement" class="menu-link">
+    <div>انشاء دفع</div>
+  </a>
+</li>
+<li class="menu-item">
+  <a href="list_payment" class="menu-link">
+    <div>عرض طرق الدفع</div>
+  </a>
+</li>
+  <li class="menu-header small text-uppercase"><span class="menu-header-text">ادارة الناشرين </span></li>
+  <li class="menu-item">
+  <a href="/add_user_payment_methods" class="menu-link">
+    <div>انشاء طريقة دفع</div>
+  </a>
+</li>
+<li class="menu-item">
+  <a href="list_add_user_payment_methods" class="menu-link">
+    <div>عرض طرق الدفع </div>
+  </a>
+</li>
+  <!-- Misc -->
   <li class="menu-header small text-uppercase"><span class="menu-header-text">ادارة الطلبات</span></li>
   <li class="menu-item">
   <a href="#" class="menu-link">
